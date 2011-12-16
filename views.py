@@ -9,4 +9,3 @@ def home(request):
 def logout_page(request):
     logout(request)
     return HttpResponseRedirect('/')
-

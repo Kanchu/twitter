@@ -117,7 +117,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'twitter',
-#    'registration',
     'twitter.registeruser'
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',

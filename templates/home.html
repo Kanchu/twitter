@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Twitter</title>
+</head>
+<body>
+    Welcome To Twitter
+    <body>
+    <div id="nav">
+    <a href="/">home</a> |
+    {% if user.is_authenticated %}
+        Welcome {{ user.username }}
+        <a href="/logout">logout</a>
+    {% else %}
+    <a href="/login/">login</a>|
+    <a href="/register/">register</a>
+    <p>Welcome anonymous user!
+    {% endif %}
+    </div>
+    {% block content %}{% endblock %}
+    </body>
+</body>
+</html>

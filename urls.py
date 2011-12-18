@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'twitter.views.home', name='home'),
     (r'', include('twitter.registeruser.urls')),
-    (r'^login/$', 'django.contrib.auth.views.login'),
+#    (r'^login/$', 'django.contrib.auth.views.login'),
     (r'^logout/$', logout_page),
 
     # url(r'^twitter/', include('twitter.foo.urls')),

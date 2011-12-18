@@ -1,4 +1,4 @@
-from django.contrib.auth import logout
+from django.contrib.auth import logout, login
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
@@ -9,3 +9,4 @@ def home(request):
 def logout_page(request):
     logout(request)
     return HttpResponseRedirect('/')
+

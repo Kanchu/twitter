@@ -1,5 +1,7 @@
 from django import forms
 import re
+from django.contrib.auth import authenticate
+from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
 
 
@@ -32,3 +34,25 @@ def clean_username(self):
         except User.DoesNotExist:
             return username
         raise forms.ValidationError('Username is already taken.')
+
+class LoginForm(AuthenticationForm):
+    required_css_class = 'required'
+
+    def clean_username(self):
+        username = self.cleaned_data.get('username')
+        self.cleaned_data['username'] = username.lower()
+        return self.cleaned_data['username']
+
+    def clean(self):
+        username = self.cleaned_data.get('username')
+        password = self.cleaned_data.get('password')
+
+        self.check_for_username_and_password(password, username)
+        self.check_for_test_cookie()
+        return self.cleaned_data
+
+    def check_for_username_and_password(self, password, username):
+        if username and password:
+            self.user_cache = authenticate(username=username, password=password)
+            if self.user_cache is None:
+                raise forms.ValidationError(_("Please enter a correct email and password."))

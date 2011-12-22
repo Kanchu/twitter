@@ -55,4 +55,4 @@ class LoginForm(AuthenticationForm):
         if username and password:
             self.user_cache = authenticate(username=username, password=password)
             if self.user_cache is None:
-                raise forms.ValidationError(_("Please enter a correct email and password."))
+                raise forms.ValidationError("Please enter a correct email and password.")

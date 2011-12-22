@@ -1,10 +1,18 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title></title>
+    <title>Twitter</title>
 </head>
 <body>
-WELCOME
+    Welcome To Twitter
+
+    {{ user.username }}
+    <a href="/list_tweet">List Tweets</a>|
+
+     <a href="/logout">logout</a>
+    <br>
+    <form action="/tweet" method="post">
+      <a href="/tweet">Tweet</a></form>
+    {% block content %}{% endblock %}
+</body>
 </body>
 </html>

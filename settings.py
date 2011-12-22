@@ -108,6 +108,9 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+HOME_PAGE = '/welcome'
+LOGIN_REDIRECT_URL = (HOME_PAGE)
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.admin',

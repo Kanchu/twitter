@@ -1,11 +1,11 @@
 # Create your views here.
-from django.contrib.auth import login
+from django.contrib.auth.views import login
 from django.contrib.auth.models import User
-from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 from registeruser.forms import RegistrationForm
 from django.http import HttpResponseRedirect
+from django.conf import settings as django_settings
 
 def register_page(request):
     if request.method == 'POST':
@@ -26,6 +26,7 @@ def register_page(request):
         return render_to_response('registration/register.html',variables)
 
 def custom_login(request, template_name, authentication_form):
+    template_name = template_name
     if request.user.is_authenticated():
         return HttpResponseRedirect(django_settings.LOGIN_REDIRECT_URL)
     else:

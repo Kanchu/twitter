@@ -1,0 +1,20 @@
+{#{% extends "welcome.html" %}#}
+<html>
+
+{#{% block content %}#}
+<body>
+ Welcome To Twitter
+
+    {{ user.username }}
+       <a href="/welcome">home</a>|<a href="/list_tweet">List Tweets</a>
+     <a href="/logout">logout</a>
+    <br>
+<form  method="POST">
+        {{ form.tweet.label_tag }}
+        {{ form.tweet }}
+        {% csrf_token %}
+        <p><input type="submit" value="Tweet"></p>
+</form>
+{#{% endblock %}#}
+</body>
+</html>

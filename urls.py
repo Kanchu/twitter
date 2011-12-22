@@ -4,7 +4,7 @@ from django.conf.urls.defaults import patterns, include, url
 # from django.contrib import admin
 # admin.autodiscover()
 from django.contrib import admin
-from views import logout_page
+from views import logout_page,welcome,tweet,list_tweet
 
 
 urlpatterns = patterns('',
@@ -13,6 +13,10 @@ urlpatterns = patterns('',
     (r'', include('twitter.registeruser.urls')),
 #    (r'^login/$', 'django.contrib.auth.views.login'),
     (r'^logout/$', logout_page),
+    (r'^welcome$',welcome),
+    (r'^tweet/$', tweet),
+    (r'^list_tweet/$', list_tweet),
+
 
     # url(r'^twitter/', include('twitter.foo.urls')),
 

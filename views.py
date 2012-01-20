@@ -4,6 +4,7 @@ from django.shortcuts import render_to_response
 from django.template.context import RequestContext
 from forms import TweetForm
 from models import Tweet
+from django.views.decorators.csrf import csrf_protect
 
 def home(request):
     return render_to_response ('home.html',RequestContext(request))
@@ -15,15 +16,19 @@ def logout_page(request):
 def welcome(request):
     return render_to_response('welcome.html', RequestContext(request))
 
+@csrf_protect
 def tweet(request):
     if request.method == 'POST':
         form = TweetForm(request.POST)
         if form.is_valid():
             twit = Tweet()
-            twit.tweet = form.cleaned_data['tweet']
+            status = twit.tweet = form.cleaned_data['tweet']
             twit.name = request.user.username
             twit.save()
-            return render_to_response('tweet.html',request)
+            return render_to_response('tweet.html',{'request':RequestContext(request),'status':status})
+        else:
+            return render_to_response('tweet.html',{'request':RequestContext(request)})
+
     else:
         form = TweetForm()
         form.name = request.user

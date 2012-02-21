@@ -4,13 +4,14 @@
 <head>
     <title></title>
 </head>
+{% load i18n %}
 <body>
- Welcome To Twitter
+ {% trans "Welcome To Twitter"%}
     {{ user.username }}
-     <a href="/welcome">home</a> |
-     <a href="/logout">logout</a>
+     <a href="/welcome">{% trans "home"%}</a> |
+     <a href="/logout">{% trans "logout"%}</a>
     <br>
-    Your Tweets are :
+    {% trans "Your Tweets are"%} :
     {% for i in list_tweet %}
 {#        {% if i.name == user.username %}#}
             <li> {{ i.name }}  |  {{ i.tweet }} </li><br>

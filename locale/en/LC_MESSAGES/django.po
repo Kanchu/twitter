@@ -9,3 +9,12 @@ msgstr ""
 
 msgid "login"
 msgstr ""
+
+msgid "home"
+msgstr ""
+
+msgid "logout"
+msgstr ""
+
+msgid "Your Tweets are"
+msgstr ""

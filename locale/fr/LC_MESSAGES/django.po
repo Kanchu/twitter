@@ -9,3 +9,12 @@ msgstr "s'inscrire"
 
 msgid "login"
 msgstr ""
+
+msgid "home"
+msgstr "maison"
+
+msgid "logout"
+msgstr "déconnexion"
+
+msgid "Your Tweets are"
+msgstr "Vos tweets sont"

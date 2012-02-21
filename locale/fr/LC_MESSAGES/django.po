@@ -34,3 +34,14 @@ msgstr "Nom d'utilisateur"
 msgid "Password"
 msgstr "mot de passe"
 
+msgid "Thank you for registering. Your information has been saved in the database."
+msgstr "Merci de vous inscrire. Vos informations ont ete enregistrees dans la base de donnees."
+
+msgid "or go back to the"
+msgstr "ou revenir a la"
+
+msgid "home page"
+msgstr "page d'accueil"
+
+
+

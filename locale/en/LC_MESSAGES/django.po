@@ -34,3 +34,12 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
+msgid "Thank you for registering. Your information has been saved in the database."
+msgstr ""
+
+msgid "or go back to the"
+msgstr ""
+
+msgid "home page"
+msgstr ""
+

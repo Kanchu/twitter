@@ -1,11 +1,11 @@
 <html>
-
+{% load i18n %}
 <body>
- Welcome To Twitter
+ {% trans "Welcome To Twitter"%}
 
     {{ user.username }}
-       <a href="/welcome">home</a>|<a href="/list_tweet">List Tweets</a>
-     <a href="/logout">logout</a>
+     <a href="/welcome">{% trans "home"%}</a>|<a href="/list_tweet">{% trans "List Tweets"%}</a>
+     <a href="/logout">{% trans "logout"%}</a>
     <br>
 <form  method="POST">{% csrf_token %}
         {{ form.tweet.label_tag }}

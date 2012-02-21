@@ -2,16 +2,17 @@
 <head>
     <title>Twitter</title>
 </head>
+{% load i18n %}
 <body>
-    Welcome To Twitter
+    {% trans "Welcome To Twitter" %}
 
     {{ user.username }}
-    <a href="/list_tweet">List Tweets</a>|
+    <a href="/list_tweet">{% trans "List Tweets"%}</a>|
 
-     <a href="/logout">logout</a>
+     <a href="/logout">{% trans "logout" %}</a>
     <br>
     <form action="/tweet" method="post">
-      <a href="/tweet">Tweet</a></form>
+      <a href="/tweet">{% trans "Tweet" %}</a></form>
     {% block content %}{% endblock %}
 </body>
 </body>

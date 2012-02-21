@@ -4,7 +4,8 @@ from django.conf.urls.defaults import patterns, include, url
 # from django.contrib import admin
 # admin.autodiscover()
 from django.contrib import admin
-from views import logout_page,welcome,tweet,list_tweet
+import settings
+from views import logout_page,welcome,tweet,list_tweet, switch_language
 
 
 urlpatterns = patterns('',
@@ -12,10 +13,12 @@ urlpatterns = patterns('',
     url(r'^$', 'twitter.views.home', name='home'),
     (r'', include('twitter.registeruser.urls')),
 #    (r'^login/$', 'django.contrib.auth.views.login'),
+    (r'^switch/(?P<language>.{2}?)/$', switch_language),
     (r'^logout/$', logout_page),
     (r'^welcome$',welcome),
     (r'^tweet/$', tweet),
     (r'^list_tweet/$', list_tweet),
+    (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 
 
     # url(r'^twitter/', include('twitter.foo.urls')),

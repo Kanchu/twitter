@@ -1,0 +1,11 @@
+msgid "Welcome To Twitter"
+msgstr "Bienvenue sur Twitter"
+
+msgid "Welcome anonymous user!"
+msgstr "Bienvenue utilisateur anonyme!"
+
+msgid "register"
+msgstr "s'inscrire"
+
+msgid "login"
+msgstr ""

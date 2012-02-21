@@ -1,14 +1,20 @@
 <html>
+{% load i18n %}
 <head>
     <title>Twitter</title>
 </head>
+<link href="/media/css/scss/style.scss" rel="stylesheet"/>
 <body>
-    Welcome To Twitter
-    <img src="/media/images/at-twitter.png">
-    <p>Welcome anonymous user!
+    <div>
+        <span>  <a href="{% url twitter.views.switch_language "fr" %}">Fran&ccedil;ais</a> </span>|
+        <span>  <a href="{% url twitter.views.switch_language "en" %}">English</a> </span>
+    </div>
+    {% trans "Welcome To Twitter"%}
+        <img class="image" src="/media/images/at-twitter.png">
+    <p class="welcome">{% trans "Welcome anonymous user!"%}
 
-    <a href="/login/">login</a>|
-    <a href="/register/">register</a>
+    <a href="/login/">{% trans "login"%}</a>|
+    <a href="/register/">{% trans "register"%}</a>
 
     {% block content %}{% endblock %}
 </body>

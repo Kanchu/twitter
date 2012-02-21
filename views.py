@@ -1,6 +1,6 @@
 from django.contrib.auth import logout
 from django.http import HttpResponseRedirect
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, redirect
 from django.template.context import RequestContext
 from forms import TweetForm
 from models import Tweet
@@ -46,3 +46,15 @@ def list_tweet(request):
             tweets.append(query)
             variables = RequestContext(request,{'list_tweet': tweets})
     return render_to_response("list_tweet.html",variables)
+
+def switch_language(request, language):
+    request.session['django_language'] = language
+    if request.META.has_key('HTTP_REFERER'):
+        referer= '/' + '/'.join(request.META['HTTP_REFERER'].split('/')[3:])
+    else:
+        referer= '/'
+
+    if referer[:4] in ["/en/", "/fr/"]:
+        referer = "/%s/%s" % (language, referer[4:])
+
+    return redirect(referer)

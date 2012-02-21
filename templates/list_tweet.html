@@ -2,10 +2,10 @@
 {% block content_main %}
 
 {% load i18n %}
- {% trans "Welcome To Twitter"%}
     {{ user.username }}
+    <div>
      <a href="/welcome">{% trans "home"%}</a> |
-     <a href="/logout">{% trans "logout"%}</a>
+     <a href="/logout">{% trans "logout"%}</a></div>
     <br>
     {% trans "Your Tweets are"%} :
     {% for i in list_tweet %}

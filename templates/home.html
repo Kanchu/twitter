@@ -2,13 +2,10 @@
 {% block content_main %}
 
 {% load i18n %}
-<link href="/media/css/scss/style.scss" rel="stylesheet"/>
-    {% trans "Welcome To Twitter"%}
-        <img class="image" src="/media/images/at-twitter.png">
     <p class="welcome">{% trans "Welcome anonymous user!"%}
-
-    <a href="/login/">{% trans "login"%}</a>|
-    <a href="/register/">{% trans "register"%}</a>
-
+    <div>
+        <a href="/login/">{% trans "login"%}</a>|
+        <a href="/register/">{% trans "register"%}</a>
+    </div>
     {% block content %}{% endblock %}
 {% endblock %}

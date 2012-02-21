@@ -2,12 +2,11 @@
 {% block content_main %}
 
 {% load i18n %}
-    {% trans "Welcome To Twitter" %}
-
     {{ user.username }}
+    <div>
     <a href="/list_tweet">{% trans "List Tweets"%}</a>|
 
-     <a href="/logout">{% trans "logout"%}</a>
+     <a href="/logout">{% trans "logout"%}</a></div>
     <br>
     <form action="/tweet" method="post">
       <a href="/tweet">{% trans "Tweet" %}</a></form>

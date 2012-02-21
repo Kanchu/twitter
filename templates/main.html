@@ -4,6 +4,10 @@
     <title>{% trans "Twitter"%}</title>
 </head>
 <body>
+<div>
+    <span>  <a href="{% url twitter.views.switch_language "fr" %}">Fran&ccedil;ais</a> </span>|
+    <span>  <a href="{% url twitter.views.switch_language "en" %}">English</a> </span>
+</div>
 {% block content_main %}
     
 {% endblock %}

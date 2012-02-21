@@ -1,9 +1,6 @@
 {% extends 'main.html' %}
 {% block content_main %}
-{#<html>#}
 {% load i18n %}
-{#<body>#}
- {% include 'trans.html' %}
  {% trans "Welcome To Twitter"%}
 
     {{ user.username }}
@@ -18,5 +15,3 @@
 </form>
  {{ status }}
 {% endblock %}
-{#</body>#}
-{#</html>#}

@@ -1,14 +1,8 @@
 {% extends 'main.html' %}
 {% block content_main %}
 
-{#<html>#}
 {% load i18n %}
-{#<head>#}
-{#    <title>Twitter</title>#}
-{#</head>#}
 <link href="/media/css/scss/style.scss" rel="stylesheet"/>
-{#<body>#}
-    {% include 'trans.html' %}
     {% trans "Welcome To Twitter"%}
         <img class="image" src="/media/images/at-twitter.png">
     <p class="welcome">{% trans "Welcome anonymous user!"%}
@@ -18,5 +12,3 @@
 
     {% block content %}{% endblock %}
 {% endblock %}
-{#</body>#}
-{#</html>#}

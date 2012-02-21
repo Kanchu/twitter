@@ -1,9 +1,12 @@
-<html>
-<head>
-    <title>Twitter</title>
-</head>
+{#<html>#}
+{#<head>#}
+{#    <title>Twitter</title>#}
+{#</head>#}
+{% extends 'main.html' %}
+{% block content_main %}
+
 {% load i18n %}
-<body>
+{#<body>#}
     {% include 'trans.html' %}
     {% trans "Welcome To Twitter" %}
 
@@ -15,6 +18,7 @@
     <form action="/tweet" method="post">
       <a href="/tweet">{% trans "Tweet" %}</a></form>
     {% block content %}{% endblock %}
-</body>
-</body>
-</html>
+{% endblock %}
+{#</body>#}
+{#</body>#}
+{#</html>#}

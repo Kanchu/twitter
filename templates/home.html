@@ -1,10 +1,13 @@
-<html>
+{% extends 'main.html' %}
+{% block content_main %}
+
+{#<html>#}
 {% load i18n %}
-<head>
-    <title>Twitter</title>
-</head>
+{#<head>#}
+{#    <title>Twitter</title>#}
+{#</head>#}
 <link href="/media/css/scss/style.scss" rel="stylesheet"/>
-<body>
+{#<body>#}
     {% include 'trans.html' %}
     {% trans "Welcome To Twitter"%}
         <img class="image" src="/media/images/at-twitter.png">
@@ -14,5 +17,6 @@
     <a href="/register/">{% trans "register"%}</a>
 
     {% block content %}{% endblock %}
-</body>
-</html>
+{% endblock %}
+{#</body>#}
+{#</html>#}

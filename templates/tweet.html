@@ -1,6 +1,8 @@
-<html>
+{% extends 'main.html' %}
+{% block content_main %}
+{#<html>#}
 {% load i18n %}
-<body>
+{#<body>#}
  {% include 'trans.html' %}
  {% trans "Welcome To Twitter"%}
 
@@ -15,5 +17,6 @@
         <p><input type="submit" value="Tweet"></p>
 </form>
  {{ status }}
-</body>
-</html>
+{% endblock %}
+{#</body>#}
+{#</html>#}

@@ -1,11 +1,14 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title></title>
-</head>
+{#<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"#}
+{#        "http://www.w3.org/TR/html4/loose.dtd">#}
+{#<html>#}
+{#<head>#}
+{#    <title></title>#}
+{#</head>#}
+{% extends 'main.html' %}
+{% block content_main %}
+
 {% load i18n %}
-<body>
+{#<body>#}
 {% include 'trans.html' %}
  {% trans "Welcome To Twitter"%}
     {{ user.username }}
@@ -18,5 +21,6 @@
             <li> {{ i.name }}  |  {{ i.tweet }} </li><br>
 {#        {% endif %}#}
     {% endfor %}
-</body>
-</html>
+{% endblock %}
+{#</body>#}
+{#</html>#}

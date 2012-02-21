@@ -44,7 +44,7 @@ def tweet(request):
         for query in queryset:
             if request.user.username == query.name:
                 tweets.append(query)
-        status = 'abc'
+        status = ''
         for tweet in tweets:
             status = tweet.tweet
 

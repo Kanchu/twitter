@@ -1,4 +1,5 @@
 from django.contrib.auth import logout
+from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, redirect
 from django.template.context import RequestContext
@@ -14,10 +15,19 @@ def logout_page(request):
     return HttpResponseRedirect('/')
 
 def welcome(request):
-    return render_to_response('welcome.html', RequestContext(request))
+    tweets = []
+    queryset=Tweet.objects.all()
+    for query in queryset:
+        if request.user.username == query.name:
+            tweets.append(query)
+    status = 'abc'
+    for tweet in tweets:
+        status = tweet.tweet
+    return render_to_response('welcome.html', RequestContext(request,{'status':status}))
 
 @csrf_protect
 def tweet(request):
+
     if request.method == 'POST':
         form = TweetForm(request.POST)
         if form.is_valid():
@@ -30,10 +40,19 @@ def tweet(request):
             return render_to_response('tweet.html',{'request':RequestContext(request)})
 
     else:
+        tweets = []
+        queryset=Tweet.objects.all()
+        for query in queryset:
+            if request.user.username == query.name:
+                tweets.append(query)
+        status = 'abc'
+        for tweet in tweets:
+            status = tweet.tweet
+
         form = TweetForm()
         form.name = request.user
         variables = RequestContext(request, {
-                'form': form
+                'form': form,'status': status
             })
 
         return render_to_response('tweet.html',RequestContext(request),variables)
@@ -44,7 +63,7 @@ def list_tweet(request):
     for query in queryset:
         if request.user.username == query.name:
             tweets.append(query)
-            variables = RequestContext(request,{'list_tweet': tweets})
+    variables = RequestContext(request,{'list_tweet': tweets})
     return render_to_response("list_tweet.html",variables)
 
 def switch_language(request, language):

@@ -3,7 +3,7 @@
 {% load i18n %}
     {{ user.username }}
      <div><a href="/welcome">{% trans "home"%}</a>|<a href="/list_tweet">{% trans "List Tweets"%}</a>
-     <a href="/logout">{% trans "logout"%}</a></div>
+     |<a href="/logout">{% trans "logout"%}</a></div>
     <br>
 <form  method="POST">{% csrf_token %}
         {{ form.tweet.label_tag }}

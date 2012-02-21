@@ -21,3 +21,16 @@ msgstr ""
 
 msgid "List Tweets"
 msgstr ""
+
+msgid "User Login"
+msgstr ""
+
+msgid "Your username and password didn't match.Please try again."
+msgstr ""
+
+msgid "Username"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+

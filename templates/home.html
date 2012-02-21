@@ -5,10 +5,7 @@
 </head>
 <link href="/media/css/scss/style.scss" rel="stylesheet"/>
 <body>
-    <div>
-        <span>  <a href="{% url twitter.views.switch_language "fr" %}">Fran&ccedil;ais</a> </span>|
-        <span>  <a href="{% url twitter.views.switch_language "en" %}">English</a> </span>
-    </div>
+    {% include 'trans.html' %}
     {% trans "Welcome To Twitter"%}
         <img class="image" src="/media/images/at-twitter.png">
     <p class="welcome">{% trans "Welcome anonymous user!"%}

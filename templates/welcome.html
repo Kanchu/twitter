@@ -4,12 +4,13 @@
 </head>
 {% load i18n %}
 <body>
+    {% include 'trans.html' %}
     {% trans "Welcome To Twitter" %}
 
     {{ user.username }}
     <a href="/list_tweet">{% trans "List Tweets"%}</a>|
 
-     <a href="/logout">{% trans "logout" %}</a>
+     <a href="/logout">{% trans "logout"%}</a>
     <br>
     <form action="/tweet" method="post">
       <a href="/tweet">{% trans "Tweet" %}</a></form>

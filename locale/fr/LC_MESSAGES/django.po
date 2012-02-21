@@ -14,10 +14,23 @@ msgid "home"
 msgstr "maison"
 
 msgid "logout"
-msgstr "déconnexion"
+msgstr "deconnexion"
 
 msgid "Your Tweets are"
 msgstr "Vos tweets sont"
 
 msgid "List Tweets"
 msgstr "Tweets Liste"
+
+msgid "User Login"
+msgstr "Connexion utilisateur"
+
+msgid "Your username and password didn't match.Please try again."
+msgstr "Votre nom d'utilisateur et mot de passe n'a pas match.Please essayez a nouveau."
+
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+msgid "Password"
+msgstr "mot de passe"
+

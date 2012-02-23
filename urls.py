@@ -9,7 +9,6 @@ from views import logout_page,welcome,tweet,list_tweet, switch_language
 
 
 urlpatterns = patterns('',
-    # Examples:
     url(r'^$', 'twitter.views.home', name='home'),
     (r'', include('twitter.registeruser.urls')),
     (r'^switch/(?P<language>.{2}?)/$', switch_language),

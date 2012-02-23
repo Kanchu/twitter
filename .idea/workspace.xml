@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ebebf0f-86f1-458a-8176-998fa98fe38c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/tweet.html" afterPath="$PROJECT_DIR$/templates/tweet.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/users" afterPath="$PROJECT_DIR$/users" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views.py" afterPath="$PROJECT_DIR$/views.py" />
     </list>
     <ignored path="twitter.iws" />
@@ -41,10 +38,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tweet.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="tweet.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/tweet.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="30" selection-start="97" selection-end="97" vertical-scroll-proportion="0.098076925">
+            <state line="18" column="14" selection-start="623" selection-end="623" vertical-scroll-proportion="-11.769231">
               <folding />
             </state>
           </provider>
@@ -86,10 +83,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="29" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0">
+            <state line="25" column="0" selection-start="811" selection-end="811" vertical-scroll-proportion="-0.20404722">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="146" column="24" selection-start="5136" selection-end="5136" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -132,8 +138,8 @@
         <option value="$PROJECT_DIR$/locale/fr/LC_MESSAGES/django.po" />
         <option value="$PROJECT_DIR$/templates/main.html" />
         <option value="$PROJECT_DIR$/urls.py" />
-        <option value="$PROJECT_DIR$/views.py" />
         <option value="$PROJECT_DIR$/templates/tweet.html" />
+        <option value="$PROJECT_DIR$/views.py" />
       </list>
     </option>
   </component>
@@ -356,7 +362,7 @@
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.07275542" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -418,7 +424,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/views.py</url>
-          <line>40</line>
+          <line>39</line>
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -427,11 +433,6 @@
     <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="14" selection-start="466" selection-end="466" vertical-scroll-proportion="0.41975307" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="22" selection-start="3641" selection-end="3641" vertical-scroll-proportion="0.85" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/users">
@@ -507,6 +508,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tweet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="14" selection-start="623" selection-end="623" vertical-scroll-proportion="-11.769231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/welcome.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="4" selection-start="272" selection-end="272" vertical-scroll-proportion="-6.5384617">
@@ -514,16 +522,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views.py">
+    <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="29" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.0">
+        <state line="146" column="24" selection-start="5136" selection-end="5136" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tweet.html">
+    <entry file="file://$PROJECT_DIR$/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="30" selection-start="97" selection-end="97" vertical-scroll-proportion="0.098076925">
+        <state line="25" column="0" selection-start="811" selection-end="811" vertical-scroll-proportion="-0.20404722">
           <folding />
         </state>
       </provider>

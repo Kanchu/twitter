@@ -34,7 +34,6 @@ def tweet(request):
             status = twit.tweet = form.cleaned_data['tweet']
             twit.name = request.user.username
             twit.save()
-#            name = twit.name
             variables = RequestContext(request,{
                 'status':status
             })

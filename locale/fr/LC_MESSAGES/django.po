@@ -43,5 +43,7 @@ msgstr "ou revenir a la"
 msgid "home page"
 msgstr "page d'accueil"
 
+msgid "You haven't tweeted yet !!!!"
+msgstr "Vous n'avez pas encore tweeté!!"
 
 

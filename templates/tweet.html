@@ -5,11 +5,15 @@
      <div><a href="/welcome">{% trans "home"%}</a>|<a href="/list_tweet">{% trans "List Tweets"%}</a>
      |<a href="/logout">{% trans "logout"%}</a></div>
     <br>
+    <div class="status">
+        {% if status != "" %}
+            <b>{{ user.username }}</b> {% trans "says" %} <b>{{ status }}</b>
+        {% endif %}
+    </div>
 <form  method="POST">{% csrf_token %}
         {{ form.tweet.label_tag }}
         {{ form.tweet }}
         {% csrf_token %}
         <p><input type="submit" value="Tweet"></p>
 </form>
- {{ status }}
 {% endblock %}

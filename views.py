@@ -34,7 +34,11 @@ def tweet(request):
             status = twit.tweet = form.cleaned_data['tweet']
             twit.name = request.user.username
             twit.save()
-            return render_to_response('tweet.html',{'request':RequestContext(request),'status':status})
+#            name = twit.name
+            variables = RequestContext(request,{
+                'status':status
+            })
+            return render_to_response('tweet.html',RequestContext(request),variables)
         else:
             return render_to_response('tweet.html',{'request':RequestContext(request)})
 

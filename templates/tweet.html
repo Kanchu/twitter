@@ -1,7 +1,7 @@
 {% extends 'main.html' %}
 {% block content_main %}
 {% load i18n %}
-    {{ user.username }}
+    <b>{{ user.username }}</b>
      <div><a href="/welcome">{% trans "home"%}</a>|<a href="/list_tweet">{% trans "List Tweets"%}</a>
      |<a href="/logout">{% trans "logout"%}</a></div>
     <br>

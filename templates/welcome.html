@@ -4,7 +4,9 @@
 {% load i18n %}
       <b>{{ user.username }}</b> !!
     <div class="status">
-        <b>{{ user.username }}</b> says <b>{{ status }}</b>
+        {% if status != "" %}
+            <b>{{ user.username }}</b> says <b>{{ status }}</b>
+        {% endif %}
     </div>
     <div>
     <a href="/list_tweet">{% trans "List Tweets"%}</a>|

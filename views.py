@@ -19,7 +19,7 @@ def welcome(request):
     for query in queryset:
         if request.user.username == query.name:
             tweets.append(query)
-    status = 'abc'
+    status = ''
     for tweet in tweets:
         status = tweet.tweet
     return render_to_response('welcome.html', RequestContext(request,{'status':status}))

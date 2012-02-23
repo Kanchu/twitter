@@ -46,3 +46,6 @@ msgstr ""
 msgid "You haven't tweeted yet !!!!"
 msgstr ""
 
+msgid "says"
+msgstr ""
+

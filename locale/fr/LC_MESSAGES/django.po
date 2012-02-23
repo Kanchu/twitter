@@ -46,4 +46,5 @@ msgstr "page d'accueil"
 msgid "You haven't tweeted yet !!!!"
 msgstr "Vous n'avez pas encore tweete!!"
 
-
+msgid "says"
+msgstr "dit"

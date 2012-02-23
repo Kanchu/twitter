@@ -12,7 +12,6 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'twitter.views.home', name='home'),
     (r'', include('twitter.registeruser.urls')),
-#    (r'^login/$', 'django.contrib.auth.views.login'),
     (r'^switch/(?P<language>.{2}?)/$', switch_language),
     (r'^logout/$', logout_page),
     (r'^welcome$',welcome),
@@ -20,8 +19,6 @@ urlpatterns = patterns('',
     (r'^list_tweet/$', list_tweet),
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 
-
-    # url(r'^twitter/', include('twitter.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

@@ -5,7 +5,7 @@
       <b>{{ user.username }}</b> !!
     <div class="status">
         {% if status != "" %}
-            <b>{{ user.username }}</b> says <b>{{ status }}</b>
+            <b>{{ user.username }}</b> {% trans "says" %} <b>{{ status }}</b>
         {% endif %}
     </div>
     <div>

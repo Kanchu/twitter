@@ -10,9 +10,7 @@
     {% if list_tweet %}
         {% trans "Your Tweets are"%} :
         {% for i in list_tweet %}
-{#        {% if i.name == user.username %}#}
             <li> {{ i.tweet }} </li><br>
-{#        {% endif %}#}
         {% endfor %}
     {% else %}
         {% trans "You haven't tweeted yet !!!!" %}
